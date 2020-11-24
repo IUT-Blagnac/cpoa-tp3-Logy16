@@ -1,6 +1,8 @@
-
-public class SimpleFabriquePizza {
-	 public Pizza creerPizza(String type) {
+public class PizzeriaFactory {
+	
+	private static PizzeriaFactory uniqueInstance = new PizzeriaFactory();
+	
+	public Pizza createPizza(String type) {
 
 		 Pizza pizza;
 			if (type.equals("fromage")) {
@@ -12,4 +14,8 @@ public class SimpleFabriquePizza {
 			}
 			return pizza;
 	 }
+	
+	public static PizzeriaFactory getInstance() {
+		return uniqueInstance;
+	}
 }
