@@ -8,29 +8,29 @@
 !include config.cfg
 
 abstract class Pizza {
-  ~String nom
-  ~String pate
+  ~String name
+  ~String crust
   ~String sauce
   ~ArrayList garnitures
-  ~void preparer()
-  ~void cuire()
-  ~void couper()
-  ~void emballer()
-  +String getNom()
+  ~void prepare()
+  ~void bake()
+  ~void cut()
+  ~void wrap()
+  +String getName()
 }
 
-class PizzaFromageStyleBrest {
-  +PizzaFromageStyleBrest()
+class PizzaCheeseStyleBrest {
+  +PizzaCheeseStyleBrest()
 }
-Pizza <|-- PizzaFromageStyleBrest
+Pizza <|-- PizzaCheeseStyleBrest
 
-class PizzaFromageStyleStrasbourg {
-  +PizzaFromageStyleStrasbourg()
+class PizzaCheeseStyleStrasbourg {
+  +PizzaCheeseStyleStrasbourg()
 }
-Pizza <|-- PizzaFromageStyleStrasbourg
+Pizza <|-- PizzaCheeseStyleStrasbourg
 
-class PizzaFromageStyleCorse as "..." {
+class PizzaCheeseStyleCorse as "..." {
 }
-Pizza <|-- PizzaFromageStyleCorse
+Pizza <|-- PizzaCheeseStyleCorse
 
 @enduml
